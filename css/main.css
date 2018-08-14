@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-size: 18px;
+  background-color: #F7F7F7;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+
+/* MENU */
+
+.menu, .heightHack {
+  padding: 40px 0;
+  font-size: 3vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.heightHack {
+  visibility: hidden;
+}
+.work {
+  position: fixed;
+  left: 37px;
+}
+.contact {
+  position: fixed;
+  right: 40px;
+}
+.links a:hover {
+  border-bottom: 3px solid black;
+}
+
+/* WORK */
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.cell {
+  width: calc(100% / 3);
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.image {
+  max-width: 100%;
+  margin: auto;
+}
+.cell img {
+  display: block;
+  padding-bottom: 40px;
+}
+
+/* Break into two columnns */
+@media screen and (max-width: 960px) {
+  .cell {
+    width: 50%;
+  }
+  .links a:hover {
+    border-bottom: 2px solid black;
+  }
+}
+
+/* Break into one columnn */
+@media screen and (max-width: 560px) {
+  .menu, .heightHack {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 40px 0;
+  }
+  .contact {
+    top: 69px;
+  }
+  .cell {
+    width: 100%;
+  }
+  .links a:hover {
+    border-bottom: 1px solid black;
+  }
+}
